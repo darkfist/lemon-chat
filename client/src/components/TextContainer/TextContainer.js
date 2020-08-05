@@ -1,30 +1,30 @@
 import React from 'react';
 
 import onlineIcon from '../../icons/onlineIcon.png';
+import lemonImg from './lemon.png';
 
 import './TextContainer.css';
 
 const TextContainer = ({ users }) => (
     <div className="textContainer">
         <div>
-            <h1>Realtime Chat Application <span role="img" aria-label="emoji">💬</span></h1>
-            <h2>Created with React, Express, Node and Socket.IO <span role="img" aria-label="emoji">❤️</span></h2>
-            <h2>Try it out right now! <span role="img" aria-label="emoji">⬅️</span></h2>
+            <img src={lemonImg} className="lemon" alt="lemon logo" />
+            <h1>Lemon Chat - Realtime Chat Application</h1>
         </div>
         {
             users
                 ? (
                     <div>
-                        <h1>People currently chatting:</h1>
+                        <h2>People currently chatting:</h2>
                         <div className="activeContainer">
-                            <h2>
+                            <h4>
                                 {users.map(({ name }) => (
                                     <div key={name} className="activeItem">
                                         {name}
                                         <img alt="Online Icon" src={onlineIcon} />
                                     </div>
                                 ))}
-                            </h2>
+                            </h4>
                         </div>
                     </div>
                 )
