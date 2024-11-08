@@ -17,7 +17,7 @@ const Chat = ({ location }) => {
   const [users, setUsers] = useState([]);
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([]);
-  const ENDPOINT = 'https://lemon-chat-app.herokuapp.com/';
+  const ENDPOINT = 'https://lemon-chat-server.onrender.com/';
 
   useEffect(() => {
     const { name, room } = queryString.parse(location.search);
